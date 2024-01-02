@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:5000/books")
+      .get("https://bookstore-backend-gbsq.onrender.com/books")
       .then((response) => {
         setBooks(response.data);
         setIsLoading(false);
@@ -28,7 +28,7 @@ const Home = () => {
 
     if (result) {
       axios
-        .delete(`http://localhost:5000/books/${id}`)
+        .delete(`https://bookstore-backend-gbsq.onrender.com/books/${id}`)
         .then(() => {
           alert("Book deleted");
           setBooks(books.filter((book) => book._id !== id));

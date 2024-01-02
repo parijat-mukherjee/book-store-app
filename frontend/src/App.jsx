@@ -5,8 +5,10 @@ import DisplayBook from "./pages/DisplayBook";
 import EditBook from "./pages/EditBook";
 import DeleteBook from "./pages/DeleteBook";
 import PageNotFound from "./pages/PageNotFound";
+import dotenv from "dotenv";
 
 const App = () => {
+  dotenv.config();
   return (
     <>
       <Routes>

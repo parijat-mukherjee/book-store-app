@@ -15,7 +15,7 @@ const EditBook = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .get("http://localhost:5000/books/" + id)
+      .get("https://bookstore-backend-gbsq.onrender.com/books/" + id)
       .then((response) => {
         setTitle(response.data.title);
         setAuthor(response.data.author);
@@ -30,7 +30,7 @@ const EditBook = () => {
   const handleSubmit = () => {
     setIsLoading(true);
     axios
-      .put(`http://localhost:5000/books/${id}`, {
+      .put(`https://bookstore-backend-gbsq.onrender.com/books/${id}`, {
         title,
         author,
         publishYear: year,

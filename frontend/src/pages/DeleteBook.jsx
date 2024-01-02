@@ -9,7 +9,7 @@ const DeleteBook = () => {
   useEffect(() => {
     setIsLoading(true);
     axios
-      .delete(`http://localhost:5000/books/${id}`)
+      .delete(`https://bookstore-backend-gbsq.onrender.com/books/${id}`)
       .then((response) => {
         console.log(response);
         setIsLoading(false);
